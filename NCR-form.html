@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrossFire Canada NCR Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function goToEditPage() {
+        window.location.href = "edit.html";
+      }
+      function goToNewPage() {
+        window.location.href = "new-NCR-form.html";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          src="images/Quasar-Innovations-Logo.png"
+          alt="logo"
+          width="300"
+          height="300"
+          id="logo"
+        />
+
+    <!--Navigation-->
+        <div class="topnav">
+          <a class="active" href="index.html">Home</a>
+          <a href="NCR-form.html">View NCR Lists</a>
+          <a href="new-NCR-form.html">Create A New NCR form</a>
+        </div>
+
+      </header>
+      <main>
+        <section class="form_close">
+          <div class="inner-two-cols">
+            <input type="text" placeholder="Search NCR # ...NCR Open" class="search-box" />
+            <button class="search-button">
+              Search
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+
+        <section class="form_open">
+          <fieldset class="first_form">
+            <legend>NCR's currently open</legend>
+            <img
+              src="images/formOpen.jpg"
+              alt="formOpen"
+              width="300"
+              height="300"
+            />
+          </fieldset>
+
+          <div class="container">
+            <button class="button_edit" onclick="goToEditPage()">Edit</button>
+          </div>
+
+          <div class="container">
+            <button class="button_new" onclick="goToNewPage()">New NCR form</button>
+          </div>
+        </section>
+
+        <section class="form_close">
+          <div class="inner-two-cols">
+            <input type="text" placeholder="Search NCR # ...NCR Closed" class="search-box" />
+            <button class="search-button">
+              Search
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+
+          <fieldset class="second_form">
+            <legend>Previous NCR's (closed)</legend>
+            <img src="images/form.png" alt="form" width="300" height="236" />
+          </fieldset>
+        </section>
+      </main>
+      <footer>
+        <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossFire Canada NCR Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      function goToSaveAndExitPage() {
+        window.location.href = "NCR-form.html";
+      }
+      function goToCancelAndExitPage() {
+        window.location.href = "NCR-form.html";
+      }
+    </script>
+</head>
+
+<header class="header-cols">
+    <div><img src="images/Quasar-Innovations-Logo.png" alt="logo" width="311" height="123"></div>
+</header>
+
+<!--Navigation-->
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="NCR-form.html">View NCR Lists</a>
+  <a href="new-NCR-form.html">Create A New NCR form</a>
+</div>
+
+<main>
+    <section class="Big_form">
+      <fieldset>
+        <legend>Edit</legend>
+        <img src="images/formOpen.jpg" alt="formOpen" width="300" height="300">
+      </fieldset>
+    
+    <div class="two-col"> 
+
+      <div>
+        <button class="button_save" onclick="goToSaveAndExitPage()">Save and Exit</button>
+        <button class="button_cancel" onclick="goToCancelAndExitPage()">Cancel and Exit</button>
+      </div>
+    </div>
+ 
+    </section>
+</main>
+
+<footer>
+    <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
+</footer>
+</div>
+</body>
+</html>

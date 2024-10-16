@@ -1,0 +1,197 @@
+
+*{box-sizing: border-box;} 
+body {
+	background-color: #FFF;
+	color:#003985;
+	font-family: "Poppins", sans-serif;
+ 	font-weight: 400;
+  	font-style: normal;
+	font-size: 100%;
+	margin: 0;
+}
+
+select#sName {
+	width: 200px; 
+  }
+
+main {
+	width: 95%; 
+	margin:  0 auto;
+}
+
+footer {
+	background-color: #E3C7E0 ;
+	border: 1px solid #003985 ;
+	color: #003985;
+	margin-top:  25px;
+	padding: 15px;
+	text-align: center;
+}
+
+/* Navigation (menu bar)*/
+.topnav {
+	background-color: #E3C7E0;
+	border: 1px solid #003985;
+	overflow: hidden;
+	margin-bottom: 15px;
+  }
+  
+  .topnav a {
+	float: left;
+	color: #003985;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: #60f20c;
+	color: #003985;
+  }
+  
+ /* deosn't seem to be working at the moment, needs investigating
+  .topnav a.active {
+	background-color: #60f20c;
+	color: #003985;
+  } */
+
+input[type="text"] {
+	border: 1px solid #003985;
+	border-radius: 0;
+	display:block;
+	height: 30px;
+	width: 200px;
+}
+
+/*for resizing text boxes see above*/
+
+input[type="checkbox"] {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+input:focus, textarea:focus {
+	background-color: rgba(116, 40, 234, 0.1);
+}
+
+fieldset {
+	border-color: rgba(0, 0, 128, 0.4);
+	border-style: solid;
+	margin-bottom: 32px;
+	padding-bottom: 32px;
+}
+
+legend {
+	background-color: #003985;
+	color: #E3C7E0 ;
+	font-size: 1.25em;
+	font-weight: 700;
+}
+
+select {
+	background: #fff;
+	border-color: #003985;
+	border-radius: 0;
+	color: #003985;
+	height: 30px;
+	width: 100%;
+}
+
+textarea {
+	background-color: #fff;
+	border-color: #003985;
+	border-radius: 0;
+	color: #003985;
+	height: 150px;
+	width: 100%;
+}
+
+label {
+	font-size: 0.85em;
+}
+
+::placeholder {
+	color: #bbb;
+	font-size: 0.80em;
+	padding-left: 5px;
+}
+
+button {
+	background :#E3C7E0 ;
+	border: 1px solid #003985 ;
+	border-radius: 5px;
+	color: #003985;
+	font-size: 0.75em;
+	margin-top: 10px;
+	padding: 10px 30px;
+}
+
+button :hover {
+	background: #60f20c;
+	border: 1px solid #60f20c;
+}
+
+/******************
+Classes
+******************/
+
+
+.user {
+	font-size: 0.75em;
+	text-align: right;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+.two-col, .header-cols, .inner-two-cols {
+	display: grid;
+}
+
+.two-col {
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
+
+.inner-two-cols {
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.header-cols {
+	background-color: #fff;
+	grid-template-columns: 1fr 1fr;
+	margin: 15px auto;
+	padding: 10px;
+	width: 95%;
+}
+
+.header-cols img {
+	width: 100%;
+	height: auto;
+}
+
+/* Not needed for this assignment, but leftover form another so I'll keep it*/
+@media screen and (min-width:768px) {
+	body {
+		font-size: 110%;
+	}
+
+	.header-cols img {
+		width: 45%;
+	}
+
+	.two-col {
+		gap: 15px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/*changes properties on screens with 1440px or more */
+@media screen and (min-width: 1440px) {
+	body {font-size: 120%;}
+
+	main, .two-col {width: 65%;}
+}
