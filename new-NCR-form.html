@@ -1,134 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CrossFire Canada NCR Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="updateCurrentDate()">
     <header class="header-cols">
-        <div><img src="images/Quasar-Innovations-Logo.png" alt="logo" width="311" height="123"></div>
+      <div>
+        <img
+          src="images/Quasar-Innovations-Logo.png"
+          alt="logo"
+          width="311"
+          height="123"
+        />
+      </div>
     </header>
-    
+
     <!--Navigation-->
     <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="NCR-form.html">View NCR Lists</a>
-        <a href="new-NCR-form.html">Create A New NCR form</a>
-      </div>
-    
-        <main>
-        <form action="http://webdevbasics.net/scripts/demo.php" method="post">
-            <fieldset>
+      <a class="active" href="index.html">Home</a>
+      <a href="NCR-form.html">View NCR Lists</a>
+      <a href="new-NCR-form.html">Create A New NCR form</a>
+    </div>
 
-                <legend>Quality Representative Section</legend> 
-                
-                <div class="header-cols">
+    <main>
+      <form action="http://webdevbasics.net/scripts/demo.php" method="post">
+        <fieldset>
+          <legend>Quality Representative Section</legend>
 
-                    <label>Identify Process Applicable</label>
-
-                    <div>
-                        <input id="SupplierRecInsp" name="SupplierRecInsp" type="checkbox"> 
-                        <label for="SupplierRecInsp">Supplier or Rec-Insp</label>
-                    </div>
-                    
-                    <div>
-                        <input id="WIP" name="WIP" type="checkbox"> 
-                        <label for="WIP">WIP (Production Order)</label>
-                    </div>
-                    
-                </div>
-                
-                <div class="inner-two-cols">
-
-                    <div id = "selSplr">                        
-                    <label for="sName">Suppliers Name</label>
-                    <select id="sName">
-                        <option value="">Nothing selected</option>
-                        <option value="whitePages">White Pages</option>
-                        <option value="dunderMuffin">Dunder Muffin</option>
-                        <option value="sabre">Sabre</option>
-                      </select>
-                    </div>
-
-                    <div>
-                        <label for="NCRNo">NCR No</label>
-                        <input id="NCRNo" name="NCRNo" type="text" required> 
-                    </div>
-
-                </div>
-
-                <div>
-                   <label for="DescriptionItem">Description of Item (Including SAP NO.):</label>
-                   <textarea id="DescriptionItem" name="DescriptionItem" required></textarea>
-                </div>
-
-                <div>
-                    <label for="DescriptionDefect">Description of Defect: (please provide as much detail as possible)</label>
-                    <textarea id="DescriptionDefect" name="DescriptionDefect" required></textarea>
-                 </div>
-
-                    
-                 <div class="inner-two-cols">
-                                        
-                    <div>
-                        <label for="ProdNo">PO or Prod No</label>
-                        <input id="ProdNo" name="ProdNo" type="text"
-                    required> 
-                    </div>
-
-                    <div>
-                        <label for="SalesOrder">Sales Order No</label> 
-                        <input id="SalesOrder" name="SalesOrder" type="text" required> 
-                    </div>
-
-                    <div>
-                        <label for="QuantityRec">Quantity Received</label>
-                        <input id="QuantityRec" name="QuantityRec" type="text" required>
-                    </div>  
-
-                    <div>
-                        <label for="QuantityDef">Quantity Defective</label>
-                        <input id="QuantityDef" name="QuantityDef" type="text" required>
-                        </div>  
-                </div>
-                    
-                <label>Item marked Nonconforming</label>
-
-                    <div>
-                        <input id="Yes" name="Yes" type="checkbox"> 
-                        <label for="Yes">Yes</label>
-                    </div>
-
-                    <div>
-                        <input id="No" name="No" type="checkbox"> 
-                        <label for="No">No</label>
-                    </div>
-
-                    <div>
-                        <label for="Date">Date:</label>
-                        <input id="Date" name="Date" type="date" required>
-                    </div>
-                </fieldset>              
-
-        <div class="two-col">
+          <div class="header-cols">
+            <label>Identify Process Applicable</label>
 
             <div>
-            <button type="submit" formaction="NCR-form.html">Save</button>
-            <button type="submit" formaction="NCR-form.html">Save and Submit</button>
+              <input
+                id="SupplierRecInsp"
+                name="SupplierRecInsp"
+                type="checkbox"
+              />
+              <label for="SupplierRecInsp">Supplier or Rec-Insp</label>
             </div>
 
-        </div>
+            <div>
+              <input id="WIP" name="WIP" type="checkbox" />
+              <label for="WIP">WIP (Production Order)</label>
+            </div>
+          </div>
 
-    </form>
+          <div class="inner-two-cols">
+            <div id="selSplr">
+              <label for="sName">Suppliers Name</label>
+              <select id="sName">
+                <option value="">Nothing selected</option>
+                <option value="whitePages">White Pages</option>
+                <option value="dunderMuffin">Dunder Muffin</option>
+                <option value="sabre">Sabre</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="NCRNo">NCR No</label>
+              <pre id="NCRNo" name="NCRNo"></pre>
+            </div>
+          </div>
+
+          <div>
+            <label for="DescriptionItem"
+              >Description of Item (Including SAP NO.):</label
+            >
+            <textarea
+              id="DescriptionItem"
+              name="DescriptionItem"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="DescriptionDefect"
+              >Description of Defect: (please provide as much detail as
+              possible)</label
+            >
+            <textarea
+              id="DescriptionDefect"
+              name="DescriptionDefect"
+              required
+            ></textarea>
+          </div>
+
+          <div class="inner-two-cols">
+            <div>
+              <label for="ProdNo">PO or Prod No</label>
+              <input id="ProdNo" name="ProdNo" type="text" required />
+            </div>
+
+            <div>
+              <label for="SalesOrder">Sales Order No</label>
+              <input id="SalesOrder" name="SalesOrder" type="text" required />
+            </div>
+
+            <div>
+              <label for="QuantityRec">Quantity Received</label>
+              <input id="QuantityRec" name="QuantityRec" type="text" required />
+            </div>
+
+            <div>
+              <label for="QuantityDef">Quantity Defective</label>
+              <input id="QuantityDef" name="QuantityDef" type="text" required />
+            </div>
+          </div>
+
+          <label>Item marked Nonconforming</label>
+
+          <div>
+            <input id="Yes" name="Yes" type="checkbox" />
+            <label for="Yes">Yes</label>
+          </div>
+
+          <div>
+            <input id="No" name="No" type="checkbox" />
+            <label for="No">No</label>
+          </div>
+          <div>
+            <label for="currentDate">Date:</label>
+            <pre id="currentDate"></pre>
+          </div>
+        </fieldset>
+
+        <div class="two-col">
+          <div>
+            <button type="submit" formaction="NCR-form.html">Save</button>
+            <button type="submit" formaction="NCR-form.html">
+              Save and Submit
+            </button>
+          </div>
+        </div>
+      </form>
     </main>
     <footer>
-        <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
+      <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
     </footer>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

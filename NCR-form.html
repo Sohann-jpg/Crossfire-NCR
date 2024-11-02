@@ -13,10 +13,28 @@
     />
     <script>
       function goToEditPage() {
-        window.location.href = "edit.html";
-      }
-      function goToNewPage() {
-        window.location.href = "new-NCR-form.html";
+        // Find the selected radio button
+        let selectedOption = document.querySelector(
+          'input[name="option"]:checked'
+        );
+
+        if (selectedOption) {
+          // Save the selected value to local storage
+          localStorage.setItem("selectedOption", selectedOption.value);
+
+          // Before navigating to the edit page, check if there's saved data
+          const savedData = localStorage.getItem(
+            `editedData-${selectedOption.value}`
+          );
+          if (savedData) {
+            localStorage.setItem("savedEdits", savedData);
+          }
+
+          // Navigate to the edit page
+          window.location.href = "edit.html"; // Replace 'edit.html' with your edit page URL
+        } else {
+          alert("Please select an option before editing.");
+        }
       }
     </script>
   </head>
@@ -32,47 +50,57 @@
           id="logo"
         />
 
-    <!--Navigation-->
+        <!--Navigation-->
         <div class="topnav">
           <a class="active" href="index.html">Home</a>
           <a href="NCR-form.html">View NCR Lists</a>
           <a href="new-NCR-form.html">Create A New NCR form</a>
         </div>
-
       </header>
       <main>
         <section class="form_close">
+          <h2>NCR Quick Search</h2>
           <div class="inner-two-cols">
-            <input type="text" placeholder="Search NCR # ...NCR Open" class="search-box" />
+            <input
+              type="text"
+              placeholder="Search NCR # ...NCR Open"
+              class="search-box"
+            />
             <button class="search-button">
               Search
               <i class="fa fa-search"></i>
             </button>
           </div>
-
-        <section class="form_open">
-          <fieldset class="first_form">
-            <legend>NCR's currently open</legend>
-            <img
-              src="images/formOpen.jpg"
-              alt="formOpen"
-              width="300"
-              height="300"
-            />
-          </fieldset>
-
-          <div class="container">
-            <button class="button_edit" onclick="goToEditPage()">Edit</button>
-          </div>
-
-          <div class="container">
-            <button class="button_new" onclick="goToNewPage()">New NCR form</button>
-          </div>
         </section>
 
+        <fieldset class="first_form">
+          <legend>NCR's currently open</legend>
+          <input type="radio" id="option1" name="option" value="2024-121" />
+          <label for="option1">2024-121</label><br />
+          <input type="radio" id="option2" name="option" value="2024-125" />
+          <label for="option2">2024-125</label><br />
+          <input type="radio" id="option3" name="option" value="2024-109" />
+          <label for="option3">2024-109</label>
+        </fieldset>
+
+        <div class="container">
+          <button class="button_edit" onclick="goToEditPage()">Edit</button>
+        </div>
+
+        <div class="container">
+          <button class="button_new" onclick="goToNewPage()">
+            New NCR form
+          </button>
+        </div>
+
         <section class="form_close">
+          <h2>Closed NCR Quick Search</h2>
           <div class="inner-two-cols">
-            <input type="text" placeholder="Search NCR # ...NCR Closed" class="search-box" />
+            <input
+              type="text"
+              placeholder="Search NCR # ...NCR Closed"
+              class="search-box"
+            />
             <button class="search-button">
               Search
               <i class="fa fa-search"></i>
@@ -85,6 +113,7 @@
           </fieldset>
         </section>
       </main>
+
       <footer>
         <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
       </footer>

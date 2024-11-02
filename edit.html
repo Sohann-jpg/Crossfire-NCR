@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CrossFire Canada NCR Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       function goToSaveAndExitPage() {
         window.location.href = "NCR-form.html";
@@ -16,40 +19,164 @@
         window.location.href = "NCR-form.html";
       }
     </script>
-</head>
+  </head>
 
-<header class="header-cols">
-    <div><img src="images/Quasar-Innovations-Logo.png" alt="logo" width="311" height="123"></div>
-</header>
-
-<!--Navigation-->
-<div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="NCR-form.html">View NCR Lists</a>
-  <a href="new-NCR-form.html">Create A New NCR form</a>
-</div>
-
-<main>
-    <section class="Big_form">
-      <fieldset>
-        <legend>Edit</legend>
-        <img src="images/formOpen.jpg" alt="formOpen" width="300" height="300">
-      </fieldset>
-    
-    <div class="two-col"> 
-
+  <body>
+    <header class="header-cols">
       <div>
-        <button class="button_save" onclick="goToSaveAndExitPage()">Save and Exit</button>
-        <button class="button_cancel" onclick="goToCancelAndExitPage()">Cancel and Exit</button>
+        <img
+          src="images/Quasar-Innovations-Logo.png"
+          alt="logo"
+          width="311"
+          height="123"
+        />
       </div>
-    </div>
- 
-    </section>
-</main>
+    </header>
 
-<footer>
-    <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
-</footer>
-</div>
-</body>
+    <!--Navigation-->
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="NCR-form.html">View NCR Lists</a>
+      <a href="new-NCR-form.html">Create A New NCR form</a>
+    </div>
+
+    <main>
+      <section>
+        <h2>Editing NCR Form</h2>
+        <fieldset>
+          <legend>Edit</legend>
+          <p id="selectedOptionDisplay">Selected Option:</p>
+
+          <div class="header-cols">
+            <label>Identify Process Applicable</label>
+
+            <div>
+              <input
+                id="SupplierRecInsp-edit"
+                name="SupplierRecInsp"
+                type="checkbox"
+              />
+              <label for="SupplierRecInsp-edit">Supplier or Rec-Insp</label>
+            </div>
+
+            <div>
+              <input id="WIP-edit" name="WIP" type="checkbox" />
+              <label for="WIP-edit">WIP (Production Order)</label>
+            </div>
+          </div>
+
+          <div class="inner-two-cols">
+            <div id="selSplr">
+              <label for="sName-edit">Suppliers Name</label>
+              <select id="sName-edit">
+                <option value="whitePages">White Pages</option>
+                <option value="dunderMuffin">Dunder Muffin</option>
+                <option value="sabre">Sabre</option>
+                <option value="beer-store">Beer Store</option>
+                <option value="LCBO">LCBO</option>
+                <option value="Circle-K">Circle K</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="NCRNo-edit">NCR No</label>
+              <input id="NCRNo-edit" name="NCRNo" type="text" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="DescriptionItem-edit"
+              >Description of Item (Including SAP NO.):</label
+            >
+            <textarea
+              id="DescriptionItem-edit"
+              name="DescriptionItem"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="DescriptionDefect-edit"
+              >Description of Defect: (please provide as much detail as
+              possible)</label
+            >
+            <textarea
+              id="DescriptionDefect-edit"
+              name="DescriptionDefect"
+              required
+            ></textarea>
+          </div>
+
+          <div class="inner-two-cols">
+            <div>
+              <label for="ProdNo-edit">PO or Prod No</label>
+              <input id="ProdNo-edit" name="ProdNo" type="text" required />
+            </div>
+
+            <div>
+              <label for="SalesOrder-edit">Sales Order No</label>
+              <input
+                id="SalesOrder-edit"
+                name="SalesOrder"
+                type="text"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="QuantityRec-edit">Quantity Received</label>
+              <input
+                id="QuantityRec-edit"
+                name="QuantityRec"
+                type="text"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="QuantityDef-edit">Quantity Defective</label>
+              <input
+                id="QuantityDef-edit"
+                name="QuantityDef"
+                type="text"
+                required
+              />
+            </div>
+          </div>
+
+          <label>Item marked Nonconforming</label>
+
+          <div>
+            <input id="Yes-edit" name="Yes" type="checkbox" />
+            <label for="Yes-edit">Yes</label>
+          </div>
+
+          <div>
+            <input id="No-edit" name="No" type="checkbox" />
+            <label for="No-edit">No</label>
+          </div>
+          <div>
+            <label for="currentDate-edit">Date:</label>
+            <pre id="currentDate-edit"></pre>
+          </div>
+        </fieldset>
+
+        <div class="two-col">
+          <div>
+            <button class="button_save" onclick="goToSaveAndExitPage()">
+              Save and Exit
+            </button>
+            <button class="button_cancel" onclick="goToCancelAndExitPage()">
+              Cancel and Exit
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>
+    </footer>
+    <script src="edit.js"></script>
+  </body>
 </html>
