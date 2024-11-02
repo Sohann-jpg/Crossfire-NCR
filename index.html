@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <header class="header-cols">
+    <!-- <header class="header-cols">
       <div>
         <img
           src="images/Quasar-Innovations-Logo.png"
@@ -28,7 +28,7 @@
         src="images/crossfire-logo-cropped.png"
         alt="The Crossfire wordmark logo, with stylized flame in the 'O' letter"
       />
-    </header>
+    </header> -->
 
     <!--Navigation-->
     <div class="topnav">
@@ -36,25 +36,97 @@
       <a href="NCR-form.html">View NCR Lists</a>
       <a href="new-NCR-form.html">Create A New NCR form</a>
     </div>
-
-    <div>
-      <div class="main-container">
+    <main>
+    <h1>Dashboard</h1>
+    <div class="main-container">
         <div>
-          <a href="NCR-form.html"
-            ><img
-              src="images/search-icon.jpg"
-              alt="A magnifying glass icon " /></a
-          ><br />
-          <a href="NCR-form.html">Find a Report</a>
+          <a href="NCR-form.html"><img src="images/Create-NCR.png" alt="A magnifying glass icon "/></a><br />
+          <!-- <a href="NCR-form.html">Create NCR</a> -->
+          <button type="button">Create NCR</button>
         </div>
         <div>
-          <a href="new-NCR-form.html"
-            ><img src="images/new-report.jpg" alt="A new document icon"
-          /></a>
-          <a href="new-NCR-form.html">Start a New Report</a>
+          <a href="new-NCR-form.html"><img src="images/Log-NCR.png" alt="A new document icon"/></a> <br>
+          <!-- <a href="new-NCR-form.html">NCR Log</a> -->
+          <button type="button">NCR Log</button>
         </div>
-      </div>
+        <div>
+          <a href="" ><img src="images/Report-NCR.png" alt="A reports icon"/></a> <br>
+          <!-- <a href="new-NCR-form.html">Reports</a> -->
+          <button type="button" disabled>Reports</button>
+        </div>
     </div>
+
+   
+      <table>
+        <tr>
+          <th>NCR No.</th>
+          <th>Supplier</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>ABC Industries</td>
+          <td>2024-10-21</td>
+          <td>Open <button id = "btn-status">Edit</button> <button  id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Zenith Supplies</td>
+          <td>2024-10-22</td>
+          <td>Open <button  id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Global Materials	</td>
+          <td>2024-10-23</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>SupplyCo</td>
+          <td>2024-10-24</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>005</td>
+          <td>Prime Solutions</td>
+          <td>2024-10-25</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>006</td>
+          <td>Nexa Resources</td>
+          <td>2024-10-26</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>007</td>
+          <td>Quality First Inc.</td>
+          <td>2024-10-27</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>008</td>
+          <td>Elite Components</td>
+          <td>2024-10-28</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>009</td>
+          <td>Topline Traders	</td>
+          <td>2024-10-29</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+        <tr>
+          <td>010</td>
+          <td>Superior Supplies	</td>
+          <td>2024-10-30</td>
+          <td>Open <button id = "btn-status">Edit</button> <button id = "btn-status"> View</button></td>
+        </tr>
+      </table>
+    </main>
+
 
     <footer>
       <p><small>PROG1180 - 2025, Quasar Innovations (NCR Form)</small></p>

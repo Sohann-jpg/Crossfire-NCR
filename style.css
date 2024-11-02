@@ -9,15 +9,48 @@ body {
   font-style: normal;
   font-size: 100%;
   margin: 0;
+  width: 100%;
+}
+h1 {
+  margin: 0;
+  width: 100%;
+}
+.main-container div {
+  display: grid;
 }
 
-select#sName {
-  width: 200px;
+a.disabled {
+  pointer-events: none;
+  cursor: default;
 }
 
-main {
-  width: 95%;
-  margin: 0 auto;
+img {
+  width: 50%;
+  margin-left: 50px;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+#btn-status {
+  padding: auto;
+  width: 40%;
 }
 
 footer {
