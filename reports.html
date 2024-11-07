@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrossFire Canada NCR Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <img src="images/Crossfire Logo.png" alt="Transparent Crossfire NCR logo">
+            <a href="index.html" class="active">Home</a>
+            <a href="NCR-form.html">NCR Logs</a>
+            <a href="new-NCR-form.html">Create</a>
+            <a href="admin-tools.html">Admin Tools</a>
+            <a href="reports.html">Reports</a>
+        </div>
+    </header>
+    <div class="report-container">
+        <h2>product defect report</h2>
+        <div class="progress-container">
+            <div class="progress">
+                <div class="mask full">
+                    <div class="fill"></div>
+                </div>
+                <div class="mask half">
+                    <div class="fill"></div>
+                </div>
+                <div class="inside-circle" id="defectFill">0%</div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="progress-report">
+            <h3>20% <br><span>Last Week</span></h3>
+            <div class="line"></div>
+            <h3>25%<br><span>Current Month</span></h3>
+        </div>
+        <div class="report-title">
+            <div class="text">
+                <h3>Product Defect over Total Products</h3>
+                <span></span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="report-container">
+       <h2>NCRs progress bar</h2>
+       <div class="progressBar">
+       <div class="progress__fill" id="progressFill"></div>
+       <span class="progress__text" id="progressText">0%</span>
+       </div>
+       <br>
+       <div class="report-title">
+        <div class="text">
+            <h3>OPEN NCRs over Total NCRs</h3>
+        </div>
+       </div>
+    </div>
+    <script src="reports.js"></script>
+</body>
+
+</html>
